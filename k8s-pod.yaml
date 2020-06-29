@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-springboot-pod
+  labels:
+    app: my-springboot
+    env: dev
+spec:
+  containers:
+  - name: backend
+    image: linxianer12/java-mypod
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
